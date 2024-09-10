@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispensador de Frutas Rulix</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Dispensador de Frutas Rulix</h1>
+        
+        <div id="lista-frutas">
+            <h2>Selecciona tus frutas</h2>
+            <ul id="frutas">
+                
+            </ul>
+        </div>
+        
+        <div id="carrito">
+            <h2>Tu Carrito de Frutas</h2>
+            <ul id="items-carrito">
+                
+            </ul>
+            <p>Total: $<span id="precio-total">0.00</span></p>
+            <button id="realizar-compra">Realizar Compra</button>
+
+            <div id="mensaje-confirmacion" style="display: none;">
+                <p>Gracias por su compra en Rulix. ¿Deseas hacer otra compra?</p>
+                <button id="hacer-otra-compra">Sí, hacer otra compra</button>
+                <button id="cerrar-mensaje">No, cerrar</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
