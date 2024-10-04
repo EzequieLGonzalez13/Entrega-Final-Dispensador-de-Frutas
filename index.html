@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dispensador de Frutas Rulix</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+    <script defer src="js/usuario.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Dispensador de Frutas Rulix</h1>
+        <header>
+            <h1>Dispensador de Frutas Rulix</h1>
+            <div id="carrito-icono">
+                <img src="img/png-transparent-shopping-cart-icon-shopping-cart-black-design-trade-thumbnail.png" alt="Carrito">
+                <span id="contador-carrito">0</span>
+            </div>
+        </header>
         
         <div id="lista-frutas">
             <h2>Selecciona tus frutas</h2>
@@ -18,16 +27,25 @@
             </ul>
         </div>
         
-        <div id="carrito">
+        <div id="carrito" class="oculto">
             <h2>Tu Carrito de Frutas</h2>
             <ul id="items-carrito">
                 
             </ul>
+            <p id="mensaje-carrito-vacio" style="display: none;">Tu carrito está vacío.</p>
             <p>Total: $<span id="precio-total">0.00</span></p>
             <button id="realizar-compra">Realizar Compra</button>
 
+            <div id="anuncio-descuento" class="anuncio oculto">
+                <div class="contenido-anuncio">
+                    <h2>¡Rulix tiene algo Especial!</h2>
+                    <p>Ya contamos con sucursales en todo el país!</p>
+                    <button id="cerrar-anuncio">Cerrar</button>
+                </div>
+            </div>
+
             <div id="mensaje-confirmacion" style="display: none;">
-                <p>Gracias por su compra en Rulix. ¿Deseas hacer otra compra?</p>
+                <p>Gracias por su compra en Rulix. Total a pagar: $<span id="total-compra">0.00</span>. ¿Deseas hacer otra compra?</p>
                 <button id="hacer-otra-compra">Sí, hacer otra compra</button>
                 <button id="cerrar-mensaje">No, cerrar</button>
             </div>
